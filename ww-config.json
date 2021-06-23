@@ -48,7 +48,8 @@
                 "options": {
                     "placeholder": "Url"
                 },
-                "bindable": true
+                "bindable": true,
+                "multiLang": true
             }
         }
     }

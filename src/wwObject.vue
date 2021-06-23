@@ -39,7 +39,10 @@ export default {
         /* wwEditor:end */
     },
     wwDefaultContent: {
-        url: 'https://youtu.be/76CMCIW-wGk',
+        // url: 'https://youtu.be/76CMCIW-wGk',
+        url: {
+            en: 'https://youtu.be/76CMCIW-wGk',
+        },
         file: '',
         provider: 'youtube',
         autoplay: false,
