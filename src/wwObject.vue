@@ -39,7 +39,6 @@ export default {
         /* wwEditor:end */
     },
     wwDefaultContent: {
-        // url: 'https://youtu.be/76CMCIW-wGk',
         url: {
             en: 'https://youtu.be/76CMCIW-wGk',
         },
@@ -97,7 +96,6 @@ export default {
         },
         src() {
             if (!this.content.url) return;
-
             let src = this.content.url;
             const provider = this.getInfoFromUrl(src).provider;
 
@@ -162,6 +160,7 @@ export default {
     methods: {
         getInfoFromUrl(url) {
             if (!this.content.url) return {};
+            url = url[`${wwLib.wwLang.lang}`] || url[`${wwLib.wwLang.defaultLang}`];
             if (url.indexOf('youtube.com') !== -1) {
                 return {
                     id: url.split('v=')[1].split('?')[0],
