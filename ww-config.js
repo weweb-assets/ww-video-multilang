@@ -52,7 +52,7 @@ export default {
             options: {
                 placeholder: 'Url',
             },
-            multilang: true,
+            multiLang: true,
             bindable: true,
             hidden: content => content.provider === 'weweb',
             defaultValue: {
