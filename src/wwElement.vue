@@ -29,8 +29,6 @@
 </template>
 
 <script>
-import { getSettingsConfigurations } from './configuration';
-
 export default {
     props: {
         content: { type: Object, required: true },
@@ -39,30 +37,12 @@ export default {
         /* wwEditor:end */
     },
     emits: ['update:content'],
-    wwDefaultContent: {
-        url: {
-            en: 'https://youtu.be/76CMCIW-wGk',
-        },
-        file: '',
-        provider: 'youtube',
-        autoplay: false,
-        controls: true,
-        loop: false,
-        muted: false,
-        previewImage: '',
-        preload: true,
-    },
     data() {
         return {
             isVideoPlayed: false,
             isEventListener: false,
         };
     },
-    /* wwEditor:start */
-    wwEditorConfiguration({ content }) {
-        return getSettingsConfigurations(content);
-    },
-    /* wwEditor:end */
     computed: {
         videoElement() {
             return this.isWeWeb ? this.$refs.video : null;
