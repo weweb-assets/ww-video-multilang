@@ -8,22 +8,6 @@ export default {
             en: 'Vidéo',
         },
         icon: 'play',
-        menuOptions: {
-            quick: {
-                sections: [
-                    'provider',
-                    'url',
-                    'file',
-                    'previewImage',
-                    'autoplay',
-                    'muted',
-                    'loop',
-                    'controls',
-                    'preload',
-                ],
-                bind: [{ prop: 'url', label: { en: 'Bind video url' } }],
-            },
-        },
     },
     properties: {
         provider: {
